@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="sub()">
+  <!-- CIN -->
+  <mat-form-field appearance="fill">
+    <mat-label>CIN</mat-label>
+    <input matInput  formControlName="cin">
+  </mat-form-field>
+  <br>
+
+  <!-- Name -->
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput  formControlName="name">
+  </mat-form-field>
+  <br>
+
+  <!-- Type -->
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <input matInput  formControlName="type">
+  </mat-form-field>
+  <br>
+
+  <!-- CV -->
+  <mat-form-field appearance="fill">
+    <mat-label>CV</mat-label>
+    <input matInput  formControlName="cv">
+  </mat-form-field>
+  <br>
+  <!-- Submit -->
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,80 @@
+{
+  "members": [
+    {
+      "id": "001",
+      "cin": "1112312",
+      "name": "mayma",
+      "type": "student",
+      "cv": ".pdf",
+      "createdDate": "21/02/2026",
+      "tab_Events": ["01"]
+    },
+    {
+      "id": "002",
+      "cin": "1314312",
+      "name": "aahmed",
+      "type": "teacher",
+      "cv": ".pdf",
+      "createdDate": "03/02/2026",
+      "tab_Events": ["01", "02"]
+    },
+    {
+      "id": "003",
+      "cin": "1412312",
+      "name": "thoura",
+      "type": "teacher",
+      "cv": ".pdf",
+      "createdDate": "17/02/2026",
+      "tab_Events": ["02"]
+    },
+    {
+      "id": "004",
+      "cin": "1556789",
+      "name": "omar",
+      "type": "student",
+      "cv": ".pdf",
+      "createdDate": "10/03/2026",
+      "tab_Events": ["01", "03"]
+    },
+    {
+      "id": "005",
+      "cin": "1889911",
+      "name": "sara",
+      "type": "student",
+      "cv": ".pdf",
+      "createdDate": "12/03/2026",
+      "tab_Events": ["03"]
+    }
+  ],
+
+  "Evt": [
+    {
+      "id": "01",
+      "titre": "Workshop Angular",
+      "datedebut": "2025-03-15",
+      "datefin": "2025-03-16",
+      "lieu": "Salle A1"
+    },
+    {
+      "id": "02",
+      "titre": "Tech Conference",
+      "datedebut": "2025-05-10",
+      "datefin": "2025-05-12",
+      "lieu": "Centre de Conférence"
+    },
+    {
+      "id": "03",
+      "titre": "AI Bootcamp",
+      "datedebut": "2025-06-01",
+      "datefin": "2025-06-03",
+      "lieu": "Salle B2"
+    },
+    {
+      "id": "04",
+      "titre": "Cyber Security Day",
+      "datedebut": "2025-07-20",
+      "datefin": "2025-07-21",
+      "lieu": "Salle A1"
+    }
+  ]
+}

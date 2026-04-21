@@ -1,0 +1,95 @@
+<div class="dashboard">
+
+  <!-- 🔷 HEADER -->
+  <h1 class="dashboard-title">Dashboard</h1>
+
+  <!-- 🔷 CARDS -->
+  <div class="dashboard-container">
+
+    <mat-card class="card card-members">
+      <div class="card-content">
+        <div class="icon-box"><mat-icon>group</mat-icon></div>
+        <div>
+          <p class="title">Members</p>
+          <h2>{{ NbMembers }}</h2>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card class="card card-events">
+      <div class="card-content">
+        <div class="icon-box"><mat-icon>event</mat-icon></div>
+        <div>
+          <p class="title">Events</p>
+          <h2>{{ NbEvents }}</h2>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card class="card card-tools">
+      <div class="card-content">
+        <div class="icon-box"><mat-icon>build</mat-icon></div>
+        <div>
+          <p class="title">Tools</p>
+          <h2>{{ NbTools }}</h2>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card class="card card-articles">
+      <div class="card-content">
+        <div class="icon-box"><mat-icon>article</mat-icon></div>
+        <div>
+          <p class="title">Articles</p>
+          <h2>{{ NbArticles }}</h2>
+        </div>
+      </div>
+    </mat-card>
+
+  </div>
+
+  <!-- 🔷 CHARTS (🔥 ONE GRID ONLY) -->
+  <div class="charts-grid">
+
+    <!-- LINE -->
+    <mat-card class="chart-card">
+      <h3>Events by Member</h3>
+      <div class="chart-wrapper">
+        <canvas baseChart
+                [type]="'line'"
+                [datasets]="chartDataLine"
+                [labels]="chartLabelsLine"
+                [options]="chartOptionsLine">
+        </canvas>
+      </div>
+    </mat-card>
+
+    <!-- PIE -->
+    <mat-card class="chart-card">
+      <h3>Teachers vs Students</h3>
+      <div class="chart-wrapper">
+        <canvas baseChart
+                [type]="'pie'"
+                [datasets]="chartDataPie"
+                [labels]="chartLabelsPie"
+                [options]="chartOptionsPie">
+        </canvas>
+      </div>
+    </mat-card>
+
+    <!-- DOUGHNUT -->
+    <mat-card class="chart-card">
+      <h3>Events by Lieu</h3>
+      <div class="chart-wrapper">
+        <canvas baseChart
+                [type]="'doughnut'"
+                [datasets]="chartDataDoughnut"
+                [labels]="chartLabelsDoughnut"
+                [options]="chartOptionsDoughnut">
+        </canvas>
+      </div>
+    </mat-card>
+
+  </div>
+
+</div>

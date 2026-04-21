@@ -1,1 +1,198 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(135deg, #f5f7fb, #eef2f7);
+}
+
+/* =========================
+   DASHBOARD WRAPPER
+========================= */
+
+.dashboard {
+  padding: 26px;
+  min-height: 100vh;
+}
+
+/* TITLE */
+.dashboard-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #1f2d3d;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   CARDS GRID
+========================= */
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+/* CARD STYLE */
+.card {
+  border-radius: 22px;
+  padding: 22px;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover premium */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+/* glow effect */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 60%);
+  transform: rotate(25deg);
+}
+
+/* CONTENT */
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ICON */
+.icon-box {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+}
+
+mat-icon {
+  font-size: 30px;
+}
+
+/* TEXT */
+.title {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.85;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* =========================
+   COLORS (gradient premium)
+========================= */
+
+.card-members {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card-events {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.card-tools {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.card-articles {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+/* =========================
+   CHARTS (3 LIGNE FIX)
+========================= */
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 15px;
+}
+
+/* CHART CARD */
+.chart-card {
+  background: white;
+  border-radius: 22px;
+  padding: 16px;
+  height: 330px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+  transition: 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-5px);
+}
+
+/* TITLE */
+.chart-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* CHART AREA */
+.chart-wrapper {
+  flex: 1;
+  position: relative;
+  min-height: 240px;
+}
+
+/* FIX canvas */
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 16px;
+  }
+
+  .dashboard-title {
+    font-size: 22px;
+  }
+
+  .chart-card {
+    height: 260px;
+  }
+}
